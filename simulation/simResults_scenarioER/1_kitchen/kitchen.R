@@ -51,7 +51,7 @@ errors <- c()
 set.seed(42)
 
 # Set up the directories
-save_dir_success <- paste0(path0, "/success/")
+save_dir_success <- paste0(path0, "/result/")
 save_dir_unsuccess <- paste0(path0, "/unsuccess/")
 
 # Ensure the "success" directory exists
