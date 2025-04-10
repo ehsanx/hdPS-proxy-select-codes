@@ -50,11 +50,72 @@ Each folder of name prefixed with `simResults_` contains subfolders for methods.
   "xgboost",                # Extreme Gradient Boosting
   "leaps"                   # Best subset selection for regression models  
   "GA",                     # Genetic algorithm optimization
+  "mclust"                  # Model-based clustering/classification (for GA's ARI)
   "MASS",                   # Modern applied statistics
   "WeightIt",               # PS weighting
   "cobalt",                 # Balance tables and plots
+  "sandwich",               # Robust covariance matrix estimators (for SEs)
   "ggplot2",                # Data visualization and plotting
-  "dplyr"                   # Data manipulation
+  "dplyr",                  # Data manipulation
+  "grid"                    # Low-level graphics system for custom grobs/legends
   ))
   ```
 
+---
+
+### 2. Choose a Simulation Scenario
+
+Go to the relevant folder under `simulation/`:
+
+- `simResults_scenario`: frequent exposure and outcome
+- `simResults_scenarioER`: rare exposure
+- `simResults_scenarioOR`: rare outcome
+
+---
+
+### 3. Run Simulations for Each Method
+
+**Step 1: Navigate to the Method Folder**
+
+- Inside each scenario folder, go to the relevant method folder.
+
+**Step 2: Run the Script**
+
+- Open and run the script to generate results.
+- To control the number of simulation iterations, set:
+  - `a`
+- Total iterations = `a`, i.e., if `a` is set to 10, the number of simulation iterations is 10.
+
+**Step 3: View the Results**
+
+- Individual results are saved to `result/results_METHOD.X.Rds` files in the method folder. `METHOD` = the method folder name; `X` = the simulation iteration index.
+  - Some individual results contain `NULL` values due to the specific simulation datasets being incompatible with the applied method.
+- These are aggregated into the `RD_METHOD` object in memory. `METHOD` = the method folder name.
+- To save the combined output, manually uncomment the final two lines of the code.
+
+---
+
+## 📝 Notes
+
+- The output `RD_METHOD` is created in memory and not saved unless modified. (`METHOD` = the method folder name.)
+- Keep the file structure unchanged unless necessary.
+
+
+---
+
+## ⚙️ How to Run Real-World Data Analysis
+
+**Step 1: Complete the setup as for the simulation.**
+
+**Step 2: Navigate to `real_data_analysis` folder.**
+
+**Step 3: Open the file `RealDataAnalysis.Rmd` and run each code chunk accrodingly.**
+
+- Results are aggregated into the `OR_all` and `RD_all` objects in memory, representing the Odds Ratio and Risk Difference, respectively.
+- The resulting condifence interval plot by method is saved as `combined_OR_RD_plot.png`.
+
+---
+
+## 📄 License
+
+This project is licensed under the GPL-3.0 license.
