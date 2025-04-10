@@ -58,3 +58,47 @@ Each folder of name prefixed with `simResults_` contains subfolders for methods.
   ))
   ```
 
+---
+
+### 2. Choose a Simulation Scenario
+
+Go to the relevant folder under `simulation/`:
+
+- `simResults_scenario`: frequent exposure and outcome
+- `simResults_scenarioER`: rare exposure
+- `simResults_scenarioOR`: rare outcome
+
+---
+
+### 3. Run Simulations for Each Method
+
+**Step 1: Navigate to the Method Folder**
+
+- Inside each scenario folder, go to the relevant method folder.
+
+**Step 2: Run the Script**
+
+- Open and run the script to generate results.
+- To control the number of simulation iterations, set:
+  - `a`
+- Total iterations = `a`, i.e., if `a` is set to 10, the number of simulation iterations is 10.
+
+**Step 3: View the Results**
+
+- Individual results are saved to `result/results_METHOD.X.Rds` files in the method folder. `METHOD` = the method folder name; `X` = the simulation iteration index.
+  - Some individual results contain `NULL` values due to the specific simulation datasets being incompatible with the applied method.
+- These are aggregated into the `RD_METHOD` object in memory. `METHOD` = the method folder name.
+- To save the combined output, manually uncomment the final two lines of the code.
+
+---
+
+## 📝 Notes
+
+- The output `RD_METHOD` is created in memory and not saved unless modified. (`METHOD` = the method folder name.)
+- Keep the file structure unchanged unless necessary.
+  
+---
+
+## 📄 License
+
+This project is licensed under the GPL-3.0 license.
