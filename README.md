@@ -96,7 +96,21 @@ Go to the relevant folder under `simulation/`:
 
 - The output `RD_METHOD` is created in memory and not saved unless modified. (`METHOD` = the method folder name.)
 - Keep the file structure unchanged unless necessary.
-  
+
+
+---
+
+## ⚙️ How to Run Real-World Data Analysis
+
+**Step 1: Complete the setup as for the simulation.**
+
+**Step 2: Navigate to `real_data_analysis` folder.**
+
+**Step 3: Open the file `RealDataAnalysis.Rmd` and run each code chunk accrodingly.**
+
+- Results are aggregated into the `OR_all` and `RD_all` objects in memory, representing the Odds Ratio and Risk Difference, respectively.
+- The resulting condifence interval plot by method is saved as `combined_OR_RD_plot.png`.
+
 ---
 
 ## 📄 License
