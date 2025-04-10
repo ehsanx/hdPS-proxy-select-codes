@@ -50,11 +50,14 @@ Each folder of name prefixed with `simResults_` contains subfolders for methods.
   "xgboost",                # Extreme Gradient Boosting
   "leaps"                   # Best subset selection for regression models  
   "GA",                     # Genetic algorithm optimization
+  "mclust"                  # Model-based clustering/classification (for GA's ARI)
   "MASS",                   # Modern applied statistics
   "WeightIt",               # PS weighting
   "cobalt",                 # Balance tables and plots
+  "sandwich",               # Robust covariance matrix estimators (for SEs)
   "ggplot2",                # Data visualization and plotting
-  "dplyr"                   # Data manipulation
+  "dplyr",                  # Data manipulation
+  "grid"                    # Low-level graphics system for custom grobs/legends
   ))
   ```
 
